@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="icon-container">
+          <canvas id="icon" width="100" height="100"></canvas>
+        </div>
+      </div>
+      <div class="content">
+        <div class="genral-info">
+          <div class="status" data-status>Enter a Location</div>
+          <div class="location" data-location>To Find the Weather</div>
+        </div>
+        <div class="details">
+          <div class="detail">
+            <div class="title" data-wind>Wind</div>
+            <div class="value">TBD</div>
+          </div>
+          <div class="detail">
+            <div class="title" data-temperature>Temperature</div>
+            <div class="value">TBD</div>
+          </div>
+          <div class="detail">
+            <div class="title" data-pressure>Pressure</div>
+            <div class="value">TBD</div>
+          </div>
+        </div>
+      </div>
+      <div class="city-search">
+        <input
+          type="text"
+          id="location"
+          data-city-search
+          placeholder="Enter Location"
+        />
+      </div>
+    </div>
+    <a
+      href="https://rapidapi.com/community/api/open-weather-map/"
+      class="rapidApi-logo"
+      >Powered by RapidAPI</a
+    >
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkCEioPvLO9uYJPunW5jZ-E3dwn6WbIPU&libraries=places&callback=initMap"></script>
+    <script src="./app.js" class="api-logo"></script>
+  </body>
+</html>
